@@ -17,3 +17,8 @@ autocmd BufRead,BufNewFile *.txt setlocal spell wrap linebreak nolist
 
 
 autocmd BufRead,BufNewFile *.md setlocal spell wrap linebreak nolist
+
+" apt-vim package manager stuff
+execute pathogen#infect()
+call pathogen#helptags()
+
