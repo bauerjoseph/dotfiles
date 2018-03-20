@@ -17,3 +17,10 @@ autocmd BufRead,BufNewFile *.txt setlocal spell wrap linebreak nolist
 
 
 autocmd BufRead,BufNewFile *.md setlocal spell wrap linebreak nolist
+
+" NerdTree mapped to f5
+map <F5> :NERDTree<cr><c-w>p
+
+" Pathogen package manager stuff
+execute pathogen#infect()
+call pathogen#helptags()
