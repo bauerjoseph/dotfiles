@@ -25,8 +25,7 @@ map <F5> :NERDTree<cr><c-w>p
 
 " Pathogen package manager stuff
 execute pathogen#infect()
-call pathogen#helptags()
+call pathogen#helptags()A
 
-execute pathogen#infect()
-call pathogen#helptags()
-
+" Plugins that are not mentioned here:
+" Status bar at bottom of screen: https://github.com/vim-airline/vim-airline
