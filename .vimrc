@@ -13,6 +13,9 @@ noremap <Right> <Nop>
 :set shiftwidth=4
 :set softtabstop=4
 
+" Turn off word wrap
+:set wrap!
+
 " Rules for text files
 autocmd BufRead,BufNewFile *.txt setlocal spell wrap linebreak nolist
 
@@ -30,3 +33,7 @@ call pathogen#helptags()
 
 " Plugins that are not mentioned here:
 " Status bar at bottom of screen: https://github.com/vim-airline/vim-airline
+
+" This is to help tell the difference between insert mode
+:autocmd InsertEnter * set cul
+:autocmd InsertLeave * set nocul
