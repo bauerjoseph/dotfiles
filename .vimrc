@@ -17,12 +17,12 @@ noremap <Right> <Nop>
 :set wrap!
 
 " Rules for text files
-autocmd BufRead,BufNewFile *.txt setlocal spell wrap linebreak nolist
+autocmd BufRead,BufNewFile *.txt setlocal wrap linebreak nolist
 
 " Rules for Latex files
-autocmd BufRead,BufNewFile *.tex setlocal spell wrap linebreak nolist
+autocmd BufRead,BufNewFile *.tex setlocal wrap linebreak nolist
 
-autocmd BufRead,BufNewFile *.md setlocal spell wrap linebreak nolist
+autocmd BufRead,BufNewFile *.md setlocal wrap linebreak nolist
 
 " NerdTree mapped to f5
 map <F5> :NERDTree<cr><c-w>p
