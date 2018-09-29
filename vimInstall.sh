@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo "Installing curl"
+
+sudo apt-get install curl
+
 echo "Installing pathogen.."
 
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
