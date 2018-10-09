@@ -160,8 +160,8 @@ bar {
 for_window [class="^.*"] border pixel 2
 
 # This is to control the gaps between windows
-gaps inner 10
-gaps outer 20
+#gaps inner 10
+#gaps outer 20
 
 #These are the commands executed at start up
 exec --no-startup-id nm-applet

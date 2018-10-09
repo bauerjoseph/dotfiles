@@ -19,6 +19,9 @@ noremap <Right> <Nop>
 " Rules for text files
 autocmd BufRead,BufNewFile *.txt setlocal wrap linebreak nolist
 
+" Use hardtabs instead of spaces for make files
+autocmd Filetype make       setlocal noexpandtab
+
 " Rules for Latex files
 autocmd BufRead,BufNewFile *.tex setlocal wrap linebreak nolist
 
