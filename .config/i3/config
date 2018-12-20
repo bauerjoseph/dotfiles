@@ -168,7 +168,7 @@ exec --no-startup-id wicd-client --tray
 exec --no-startup-id pulseaudio
 
 # Wallpaper
-exec --no-startup-id feh --bg-center ~/Pictures/wallpaper.png
+exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.png
 
 # Startup compton
 exec --no-startup-id compton
