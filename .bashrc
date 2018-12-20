@@ -122,3 +122,6 @@ setxkbmap -option caps:swapescape
 # make vim default text editor
 export VISUAL=vim
 export EDITOR="$VISUAL"
+
+# Add snap to PATH
+export PATH=$PATH:/snap/bin/

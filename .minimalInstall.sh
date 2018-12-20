@@ -1,11 +1,15 @@
 # The following are recommendations that I found online
 # https://www.lovelinux-skill.ooo/2018/07/the-ultimate-minimal-ubuntu.html
-sudo apt-get -y install i3 wicd ubuntu-drivers-common mesa-utils mesa-utils-extra compton xorg xserver-xorg nautilus volumeicon-alsa
+sudo apt-get -y install i3 wicd ubuntu-drivers-common mesa-utils mesa-utils-extra compton xorg xserver-xorg nautilus volumeicon-alsa ffmpeg
 
 sudo apt-get -y install vim curl firefox feh pulseaudio sakura
 
 git config --global user.email "bauerjoseph@protonmail.com"
 git config --global user.name "Joseph Bauer"
+
+# install snap and any snaps that I use
+sudo apt-get -y install snapd
+sudo snap install discord
 
 # Install vim package manager and a few packages I like
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
