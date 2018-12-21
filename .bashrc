@@ -123,5 +123,8 @@ setxkbmap -option caps:swapescape
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
+# use vim key bindings in shell
+set -o vi
+
 # Add snap to PATH
 export PATH=$PATH:/snap/bin/
