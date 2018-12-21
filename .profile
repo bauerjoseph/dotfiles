@@ -26,5 +26,3 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-# Kill bluetooth on start up
-rfkill block bluetooth

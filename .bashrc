@@ -116,9 +116,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-#swap caps and escape
-setxkbmap -option caps:swapescape
-
 # make vim default text editor
 export VISUAL=vim
 export EDITOR="$VISUAL"
@@ -128,3 +125,7 @@ set -o vi
 
 # Add snap to PATH
 export PATH=$PATH:/snap/bin/
+
+#swap caps and escape
+setxkbmap -option caps:swapescape
+
