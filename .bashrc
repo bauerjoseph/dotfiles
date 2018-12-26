@@ -128,4 +128,3 @@ export PATH=$PATH:/snap/bin/
 
 #swap caps and escape
 setxkbmap -option caps:swapescape
-
