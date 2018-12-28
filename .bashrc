@@ -128,3 +128,6 @@ export PATH=$PATH:/snap/bin/
 
 #swap caps and escape
 setxkbmap -option caps:swapescape
+
+# Add rust to my path
+export PATH="$HOME/.cargo/bin:$PATH"
