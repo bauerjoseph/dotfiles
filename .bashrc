@@ -126,6 +126,10 @@ set -o vi
 # Add snap to PATH
 export PATH=$PATH:/snap/bin/
 
+#python path
+export SRHT_PATH=/home/bauerjoseph/.local/lib/python3.6/site-packages/srht
+export PYTHONPATH=/usr/lib/python3.6/site-packages
+
 #swap caps and escape
 setxkbmap -option caps:swapescape
 
