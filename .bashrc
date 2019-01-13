@@ -125,3 +125,12 @@ export EDITOR="$VISUAL"
 
 # Add snap to PATH
 export PATH=$PATH:/snap/bin/
+
+# Vi shortcuts in bash 
+
+set editing-mode vi
+set keymap vi-command
+
+#python path
+export SRHT_PATH=/home/bauerjoseph/.local/lib/python3.6/site-packages/srht
+export PYTHONPATH=/usr/lib/python3.6/site-packages
