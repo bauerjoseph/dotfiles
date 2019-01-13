@@ -116,21 +116,22 @@ if ! shopt -oq posix; then
   fi
 fi
 
-#swap caps and escape
-setxkbmap -option caps:swapescape
-
 # make vim default text editor
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
+# use vim key bindings in shell
+set -o vi
+
 # Add snap to PATH
 export PATH=$PATH:/snap/bin/
-
-# Vi shortcuts in bash 
-
-set editing-mode vi
-set keymap vi-command
 
 #python path
 export SRHT_PATH=/home/bauerjoseph/.local/lib/python3.6/site-packages/srht
 export PYTHONPATH=/usr/lib/python3.6/site-packages
+
+#swap caps and escape
+setxkbmap -option caps:swapescape
+
+# Add rust to my path
+export PATH="$HOME/.cargo/bin:$PATH"
