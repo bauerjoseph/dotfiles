@@ -1,0 +1,5 @@
+[user]
+	email = bauerjoseph13@gmail.com
+	name = Joseph Bauer
+[alias]
+	nccommit = commit -a --allow-empty-message -m \"\"
