@@ -27,6 +27,9 @@ autocmd BufRead,BufNewFile *.tex setlocal wrap linebreak nolist
 
 autocmd BufRead,BufNewFile *.md setlocal wrap linebreak nolist
 
+" Highlighting for ejs files
+au BufNewFile,BufRead *.ejs set filetype=html
+
 " NerdTree mapped to f5
 map <F5> :NERDTree<cr><c-w>p
 

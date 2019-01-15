@@ -156,6 +156,9 @@ bar {
         position top
 }
 
+# Start polybar instead of i3bar
+#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
 #This is to enable i3 with gaps
 for_window [class="^.*"] border pixel 2
 
