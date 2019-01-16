@@ -121,7 +121,7 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 
 # use vim key bindings in shell
-set -o vi
+#set -o vi
 
 # Add snap to PATH
 export PATH=$PATH:/snap/bin/
@@ -135,3 +135,6 @@ setxkbmap -option caps:swapescape
 
 # Add rust to my path
 export PATH="$HOME/.cargo/bin:$PATH"
+
+#Dev mutt for sr.ht
+alias dmutt='mutt -F ~/.devmuttrc'

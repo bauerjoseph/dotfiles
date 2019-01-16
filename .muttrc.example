@@ -1,0 +1,27 @@
+# vi ~/.muttrc
+# About Me
+set from = "bauerj@josephbauer.xyz"
+set realname = "Joseph Bauer"
+
+# My credentials
+set smtp_url = "smtp://bauerj@josephbauer.xyz@smtp.fastmail.com:587/"
+set smtp_pass = "password"
+set imap_user = "bauerj@josephbauer.xyz"
+set imap_pass = "password"
+set ssl_starttls = yes
+
+# My mailboxes
+set folder = "imaps://imap.fastmail.com:993"
+set spoolfile = "+INBOX"
+
+# Where to put the stuff
+set header_cache = "~/.mutt/cache/headers"
+set message_cachedir = "~/.mutt/cache/bodies"
+set certificate_file = "~/.mutt/certificates"
+
+# Etc
+set mail_check = 30
+set move = no
+set imap_keepalive = 900
+set sort = threads
+set editor = "vim"

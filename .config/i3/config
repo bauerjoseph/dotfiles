@@ -160,7 +160,7 @@ bar {
 #exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 #This is to enable i3 with gaps
-for_window [class="^.*"] border pixel 2
+#for_window [class="^.*"] border pixel 2
 
 # This is to control the gaps between windows
 #gaps inner 10
@@ -183,3 +183,7 @@ client.focused          #000000 #000000 #ffffff #000000   #ffffff
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
 bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
 bindsym XF86AudioMute exec amixer -q set Master toggle
+
+# setting up brightness keys
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
