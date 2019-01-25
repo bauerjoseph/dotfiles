@@ -131,7 +131,11 @@ export SRHT_PATH=/home/bauerjoseph/.local/lib/python3.6/site-packages/srht
 export PYTHONPATH=/usr/lib/python3.6/site-packages
 
 #swap caps and escape
-setxkbmap -option caps:swapescape
+#setxkbmap -option caps:swapescape
+
+#swap caps with control
+setxkbmap -option ctrl:swapcaps
+
 
 # Add rust to my path
 export PATH="$HOME/.cargo/bin:$PATH"
