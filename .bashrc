@@ -143,3 +143,4 @@ export PATH="$HOME/.cargo/bin:$PATH"
 alias dmutt='mutt -F ~/.devmuttrc'
 
 alias u="cd .."
+alias e=$EDITOR
