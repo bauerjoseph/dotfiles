@@ -136,9 +136,10 @@ export PYTHONPATH=/usr/lib/python3.6/site-packages
 #swap caps with control
 setxkbmap -option ctrl:swapcaps
 
-
 # Add rust to my path
 export PATH="$HOME/.cargo/bin:$PATH"
 
 #Dev mutt for sr.ht
 alias dmutt='mutt -F ~/.devmuttrc'
+
+alias u="cd .."
