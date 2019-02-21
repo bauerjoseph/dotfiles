@@ -160,7 +160,7 @@ bar {
 #exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 #This is to enable i3 with gaps
-#for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 2
 
 # This is to control the gaps between windows
 #gaps inner 10
@@ -169,9 +169,14 @@ bar {
 #These are the commands executed at start up
 exec --no-startup-id wicd-client --tray
 exec --no-startup-id pulseaudio
+exec --no-startup-id nm-applet
 
 # Wallpaper
 exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.png
+
+# terminal colors
+exec --no-startup-id wal -i~/Pictures/wallpaper.png
+
 
 # Startup compton
 exec --no-startup-id compton
