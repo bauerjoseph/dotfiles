@@ -144,3 +144,6 @@ alias dmutt='mutt -F ~/.devmuttrc'
 
 alias u="cd .."
 alias e=$EDITOR
+
+(cat ~/.cache/wal/sequences &)
+clear
