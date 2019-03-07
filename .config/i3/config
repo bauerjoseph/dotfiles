@@ -167,9 +167,9 @@ for_window [class="^.*"] border pixel 2
 #gaps outer 20
 
 #These are the commands executed at start up
-exec --no-startup-id wicd-client --tray
+#exec --no-startup-id wicd-client --tray
 exec --no-startup-id pulseaudio
-exec --no-startup-id nm-applet
+exec --no-startup-id nm-applet --tray
 
 # Wallpaper
 exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.png
