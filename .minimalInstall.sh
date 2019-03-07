@@ -6,7 +6,7 @@ sudo apt-get -y install vim curl firefox feh pulseaudio sakura pavucontrol
 
 # install snap and any snaps that I use
 # sudo apt-get -y install snapd
-sudo snap install discord
+# sudo snap install discord
 
 # Install vim package manager and a few packages I like
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
@@ -16,9 +16,15 @@ git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 
 # polybar
-# This needs testing
-#sudo apt-get install cmake cmake-data libcairo2-dev libxcb1-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-image0-dev libxcb-randr0-dev libxcb-util0-dev libxcb-xkb-dev pkg-config python-xcbgen xcb-proto libxcb-xrm-dev i3-wm libasound2-dev libmpdclient-dev libiw-dev libcurl4-openssl-dev libpulse-dev libxcb-composite0-dev
+sudo apt install build-essential git cmake cmake-data pkg-config libcairo2-dev libxcb1-dev libxcb-util0-dev libxcb-randr0-dev libxcb-composite0-dev python-xcbgen xcb-proto libxcb-image0-dev libxcb-ewmh-dev libxcb-icccm4-dev
+mkdir ~/.source
+cd ~/.source
+git clone --recursive https://github.com/jaagr/polybar
+cd polybar
+mkdir build
+cd build
+cmake ..
+make -j$(nproc)
+sudo make install
+cd ~
 
-#mkdir ~/.polybar
-#git clone --branch 3.3 --recursive https://github.com/jaagr/polybar ~/.polybar
-#./.polybar/build.sh
