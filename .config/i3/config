@@ -187,7 +187,7 @@ client.focused          #000000 #000000 #ffffff #000000   #ffffff
 # Setting up sound volume chnage on keys
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
 bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
-bindsym XF86AudioMute exec amixer -q set Master toggle
+bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
 
 # setting up brightness keys
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
