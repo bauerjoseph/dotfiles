@@ -4,11 +4,8 @@ sudo apt-get -y install i3 wicd ubuntu-drivers-common mesa-utils mesa-utils-extr
 
 sudo apt-get -y install vim curl firefox feh pulseaudio sakura pavucontrol
 
-git config --global user.email "bauerjoseph@protonmail.com"
-git config --global user.name "Joseph Bauer"
-
 # install snap and any snaps that I use
-sudo apt-get -y install snapd
+# sudo apt-get -y install snapd
 sudo snap install discord
 
 # Install vim package manager and a few packages I like
