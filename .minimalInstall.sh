@@ -28,3 +28,24 @@ make -j$(nproc)
 sudo make install
 cd ~
 
+# rofi
+sudo apt-get install bison flex 
+sudo apt-get install libxkbcommon-dev 
+sudo apt-get install libxkbcommon-x11-dev 
+sudo apt-get install libxcb-randr0-dev 
+sudo apt-get install libxcb-xinerama0-dev 
+sudo apt-get install libxcb-xrm-dev 
+sudo apt-get install libcogl-pango-dev 
+sudo apt-get install libstartup-notification0-dev 
+sudo apt-get install librsvg2-dev 
+cd ~/.source
+git clone https://github.com/DaveDavenport/rofi.git
+cd rofi
+git submodule udpate --init
+autoreconf -i
+mkdir build
+cd build
+../configure --disable-check
+make
+sudo make install
+
