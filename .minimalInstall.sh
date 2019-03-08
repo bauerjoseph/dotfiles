@@ -2,7 +2,7 @@
 # https://www.lovelinux-skill.ooo/2018/07/the-ultimate-minimal-ubuntu.html
 sudo apt-get -y install i3 ubuntu-drivers-common mesa-utils mesa-utils-extra compton xorg xserver-xorg nautilus volumeicon-alsa ffmpeg software-properties-common network-manager-gnome autoconf make gcc
 
-sudo apt-get -y install vim curl firefox feh pulseaudio sakura pavucontrol
+sudo apt-get -y install vim curl firefox feh pulseaudio sakura pavucontrol lxappearance
 
 # install snap and any snaps that I use
 # sudo apt-get -y install snapd

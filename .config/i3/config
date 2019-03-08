@@ -173,10 +173,10 @@ exec --no-startup-id pulseaudio
 exec --no-startup-id nm-applet --tray
 
 # Wallpaper
-exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.png
+exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
 
 # terminal colors
-exec --no-startup-id wal -i~/Pictures/wallpaper.png
+exec --no-startup-id wal -i ~/Pictures/wallpaper.jpg
 
 
 # Startup compton
