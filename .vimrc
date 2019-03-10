@@ -13,6 +13,8 @@ noremap <Right> <Nop>
 :set shiftwidth=4
 :set softtabstop=4
 
+:set autoindent
+
 " Turn off word wrap
 :set wrap!
 
