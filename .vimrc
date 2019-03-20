@@ -30,7 +30,7 @@ autocmd Filetype make       setlocal noexpandtab
 " Rules for Latex files
 autocmd BufRead,BufNewFile *.tex setlocal wrap linebreak nolist
 
-autocmd BufRead,BufNewFile *.md setlocal wrap linebreak nolist
+autocmd BufRead,BufNewFile *.md setlocal wrap linebreak nolist spell
 
 " Highlighting for ejs files
 au BufNewFile,BufRead *.ejs set filetype=html
