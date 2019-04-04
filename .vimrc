@@ -1,4 +1,4 @@
-:set number
+:set relativenumber
 :syntax on
 
 " These next four lines are so that I break the habit of using the arrow keys
@@ -19,7 +19,7 @@ noremap <Right> <Nop>
 :set wrap!
 
 " Rules for text files
-autocmd BufRead,BufNewFile *.txt setlocal wrap linebreak nolist 
+autocmd BufRead,BufNewFile *.txt setlocal wrap linebreak nolist spell
 
 " Rules for c files
 autocmd BufRead,BufNewFile *.c setlocal ts=8 shiftwidth=8 softtabstop=8
