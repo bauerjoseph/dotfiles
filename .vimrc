@@ -1,4 +1,5 @@
 :set relativenumber
+:set number
 :syntax on
 
 " These next four lines are so that I break the habit of using the arrow keys
