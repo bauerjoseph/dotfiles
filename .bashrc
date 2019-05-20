@@ -120,19 +120,6 @@ fi
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-# use vim key bindings in shell
-#set -o vi
-
-# Add snap to PATH
-export PATH=$PATH:/snap/bin/
-
-#python path
-export SRHT_PATH=/home/bauerjoseph/.local/lib/python3.6/site-packages/srht
-export PYTHONPATH=/usr/lib/python3.6/site-packages
-
-#swap caps and escape
-#setxkbmap -option caps:swapescape
-
 #swap caps with control
 setxkbmap -option ctrl:swapcaps
 
@@ -144,6 +131,8 @@ alias dmutt='mutt -F ~/.devmuttrc'
 
 alias u="cd .."
 alias e=$EDITOR
+
+complete -cf sudo
 
 (cat ~/.cache/wal/sequences &)
 clear
