@@ -185,7 +185,7 @@ exec --no-startup-id wal -i ~/Pictures/wallpaper.jpg
 exec --no-startup-id compton
 
 # Colors for focus
-client.focused          #5060d8 #5060d8 #5060d8 #5060d8 #5060d8
+client.focused          #e0382c #e0382c #e0382c #e0382c #e0382c
 
 # Setting up sound volume chnage on keys
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
