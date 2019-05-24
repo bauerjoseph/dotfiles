@@ -17,8 +17,11 @@
 ;==========================================================
 
 [colors]
-focused = #5473A8
-urgent = #B8B8B8
+;focused = #5473A8
+;focused = #ea2a2a
+focused = #ffffff
+;urgent = #B8B8B8
+urgent = #000000
 foreground = #000000
 
 [bar/bar]
@@ -39,13 +42,13 @@ padding-right = 2
 
 module-margin = 1
 
-font-0 = monospace:pixelsize=12
+font-0 = monospace:pixelsize=13
 font-1 = FontAwesome 5 Free Solid:pixelsize=12
 font-2 = Nerd Font Solid:pixelsize=12
 
 modules-left = workspaces focused_window_title
 modules-center = cpu memory disk
-modules-right = network volume battery1 date
+modules-right = network volume battery date
 
 separator = %{F#4a4a4a}|%{F-}
 
@@ -71,6 +74,7 @@ label-mode = %{F#4a4a4a}|%{F-} %{F#bcecff}%mode%%{F-}
 
 label-focused = %name%
 label-focused-foreground = ${colors.focused}
+label-focused-backgroud = #000000
 label-focused-underline = ${colors.focused}
 label-focused-padding = 1
 
@@ -84,7 +88,7 @@ label-visible-padding = 1
 
 label-urgent = %name%
 label-urgent-foreground = ${colors.urgent}
-label-urgent-underline = ${colors.urgent}
+;label-urgent-underline = ${colors.urgent}
 label-urgent-padding = 1
 
 [module/focused_window_title]
@@ -127,11 +131,10 @@ ramp-volume-0 = VOL
 ramp-volume-1 = VOL
 ramp-volume-2 = VOL
 
-[module/battery1]
-type = internal/battery
-battery = BAT0
-adapter = AC
-full-at = 98
+[module/battery]
+type = custom/script
+exec = ~/.config/polybar/combined_battery.sh
+interval = 10
 
 battery-label = BAT
 format-charging = <animation-charging> 
@@ -159,10 +162,8 @@ animation-discharging-framerate = 750
 type = internal/date
 
 date = %a, %b %d
-date-alt = %A, %B %d, %Y
 
-time = %H:%M
-time-alt = %H:%M:%S
+time = %I:%M %p
 
 label = %date% %{F#4a4a4a}| %{F-}%time%
 

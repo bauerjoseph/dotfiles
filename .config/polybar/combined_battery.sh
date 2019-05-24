@@ -57,6 +57,6 @@ else
         icon="#25"
     fi
 
-    #echo "$icon $battery_percent %"
-    echo "$battery_percent %"
+    echo "BATT $battery_percent %"
 fi
+
