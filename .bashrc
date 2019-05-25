@@ -129,10 +129,17 @@ export PATH="$HOME/.cargo/bin:$PATH"
 #Dev mutt for sr.ht
 alias dmutt='mutt -F ~/.devmuttrc'
 
+# Base16 Shell
+# git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+BASE16_SHELL="$HOME/.config/base16-shell/"
+[ -n "$PS1" ] && \
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+            eval "$("$BASE16_SHELL/profile_helper.sh")"
+
 alias u="cd .."
 alias e=$EDITOR
 
 complete -cf sudo
 
-(cat ~/.cache/wal/sequences &)
-clear
+#(cat ~/.cache/wal/sequences &)
+#clear

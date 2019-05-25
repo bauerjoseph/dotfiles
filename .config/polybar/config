@@ -42,7 +42,7 @@ padding-right = 2
 
 module-margin = 1
 
-font-0 = monospace:pixelsize=13
+font-0 = undefined-medium:pixelsize=10
 font-1 = FontAwesome 5 Free Solid:pixelsize=12
 font-2 = Nerd Font Solid:pixelsize=12
 
