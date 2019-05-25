@@ -40,9 +40,9 @@ if [ "$ac" -eq 1 ]; then
     icon="#1"
 
     if [ "$battery_percent" -gt 97 ]; then
-        echo "$icon"
+        echo "FULL"
     else
-        echo "$icon $battery_percent %"
+        echo "CHR $battery_percent %"
     fi
 else
     if [ "$battery_percent" -gt 85 ]; then

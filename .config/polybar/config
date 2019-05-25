@@ -56,6 +56,10 @@ locale = en_US.UTF-8
 
 enable-ipc = true
 
+tray-position = right
+tray-padding = 0
+tray-offset-y = -4
+
 [settings]
 screenchange-reload = true
 
