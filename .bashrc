@@ -143,3 +143,6 @@ complete -cf sudo
 
 #(cat ~/.cache/wal/sequences &)
 #clear
+
+alias dark="base16_unikitty-dark"
+alias light="base16_unikitty-light"
