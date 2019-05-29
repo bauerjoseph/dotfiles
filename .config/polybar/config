@@ -21,8 +21,8 @@
 ;focused = #ea2a2a
 focused = #ffffff
 ;urgent = #B8B8B8
-urgent = #000000
-foreground = #000000
+urgent = #ffffff
+foreground = #ffffff
 
 [bar/bar]
 bottom = false
