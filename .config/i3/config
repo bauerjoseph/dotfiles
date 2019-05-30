@@ -163,7 +163,7 @@ default_border pixel 15
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 #This is to enable i3 with gaps
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 4
 
 # This is to control the gaps between windows
 gaps inner 8

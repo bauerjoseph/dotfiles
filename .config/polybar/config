@@ -47,7 +47,7 @@ font-1 = FontAwesome 5 Free Solid:pixelsize=12
 font-2 = Nerd Font Solid:pixelsize=12
 
 modules-left = workspaces focused_window_title
-modules-center = cpu memory disk
+modules-center = cpu memory 
 modules-right = network volume battery date
 
 separator = %{F#4a4a4a}|%{F-}
