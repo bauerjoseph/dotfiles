@@ -1,5 +1,5 @@
 [user]
-	email = bauerj@josephbauer.xyz
+	email = root@thesudorm.com
 	name = Joseph Bauer
 [alias]
 	nccommit = commit -a --allow-empty-message -m \"\"
