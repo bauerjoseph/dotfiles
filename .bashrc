@@ -136,8 +136,15 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
             eval "$("$BASE16_SHELL/profile_helper.sh")"
 
+# set PATH so it includes user's private bin if it exists
+# this is to add pmbootstrap to $PATH
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+    fi
+
 alias u="cd .."
 alias e=$EDITOR
+alias droplet="ssh bauerj@167.99.145.89"
 
 complete -cf sudo
 
@@ -146,3 +153,5 @@ complete -cf sudo
 
 alias dark="base16_unikitty-dark"
 alias light="base16_unikitty-light"
+
+

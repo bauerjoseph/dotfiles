@@ -68,10 +68,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+b split h 
+bindsym $mod+v split h 
 
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+b split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -178,7 +178,6 @@ exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
 
 # terminal colors
 exec --no-startup-id wal -i ~/Pictures/wallpaper.jpg
-
 
 # Startup compton
 exec --no-startup-id compton
