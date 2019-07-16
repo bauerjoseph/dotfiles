@@ -136,9 +136,10 @@ ramp-volume-1 = VOL
 ramp-volume-2 = VOL
 
 [module/battery]
-type = custom/script
-exec = ~/.config/polybar/combined_battery.sh
-interval = 10
+type = internal/battery
+poll-interval = 10
+
+battery = BAT0
 
 battery-label = BAT
 format-charging = <animation-charging> 

@@ -1,3 +1,4 @@
+:set relativenumber
 :set number
 :syntax on
 
@@ -19,7 +20,7 @@ noremap <Right> <Nop>
 :set wrap!
 
 " Rules for text files
-autocmd BufRead,BufNewFile *.txt setlocal wrap linebreak nolist 
+autocmd BufRead,BufNewFile *.txt setlocal wrap linebreak nolist spell textwidth=80
 
 " Rules for c files
 autocmd BufRead,BufNewFile *.c setlocal ts=8 shiftwidth=8 softtabstop=8
@@ -30,7 +31,8 @@ autocmd Filetype make       setlocal noexpandtab
 " Rules for Latex files
 autocmd BufRead,BufNewFile *.tex setlocal wrap linebreak nolist
 
-autocmd BufRead,BufNewFile *.md setlocal wrap linebreak nolist
+" Rules for Markdown files
+autocmd BufRead,BufNewFile *.md setlocal wrap linebreak nolist spell textwidth=80
 
 " Highlighting for ejs files
 au BufNewFile,BufRead *.ejs set filetype=html

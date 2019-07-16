@@ -120,19 +120,6 @@ fi
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-# use vim key bindings in shell
-#set -o vi
-
-# Add snap to PATH
-export PATH=$PATH:/snap/bin/
-
-#python path
-export SRHT_PATH=/home/bauerjoseph/.local/lib/python3.6/site-packages/srht
-export PYTHONPATH=/usr/lib/python3.6/site-packages
-
-#swap caps and escape
-#setxkbmap -option caps:swapescape
-
 #swap caps with control
 setxkbmap -option ctrl:swapcaps
 
@@ -142,8 +129,29 @@ export PATH="$HOME/.cargo/bin:$PATH"
 #Dev mutt for sr.ht
 alias dmutt='mutt -F ~/.devmuttrc'
 
+# Base16 Shell
+# git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+BASE16_SHELL="$HOME/.config/base16-shell/"
+[ -n "$PS1" ] && \
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+            eval "$("$BASE16_SHELL/profile_helper.sh")"
+
+# set PATH so it includes user's private bin if it exists
+# this is to add pmbootstrap to $PATH
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+    fi
+
 alias u="cd .."
 alias e=$EDITOR
+alias droplet="ssh bauerj@167.99.145.89"
 
-(cat ~/.cache/wal/sequences &)
-clear
+complete -cf sudo
+
+#(cat ~/.cache/wal/sequences &)
+#clear
+
+alias dark="base16_unikitty-dark"
+alias light="base16_unikitty-light"
+
+

@@ -30,14 +30,14 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec st
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -show run -theme ~/.config/rofi/darkblue.rasi 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -68,10 +68,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+b split h 
+bindsym $mod+v split h 
 
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+b split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -157,19 +157,20 @@ bindsym $mod+r mode "resize"
         #position top
 #}
 
+default_border pixel 15
+
 # Start polybar instead of i3bar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 #This is to enable i3 with gaps
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 4
 
 # This is to control the gaps between windows
-#gaps inner 10
-#gaps outer 20
+gaps inner 8
+gaps outer 5
 
 #These are the commands executed at start up
 #exec --no-startup-id wicd-client --tray
-exec --no-startup-id pulseaudio
 exec --no-startup-id nm-applet --tray
 
 # Wallpaper
@@ -178,12 +179,11 @@ exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
 # terminal colors
 exec --no-startup-id wal -i ~/Pictures/wallpaper.jpg
 
-
 # Startup compton
 exec --no-startup-id compton
 
 # Colors for focus
-client.focused          #000000 #000000 #ffffff #000000   #ffffff
+client.focused          #ba2ad3 #ba2ad3 #ba2ad3 #ba2ad3 #ba2ad3
 
 # Setting up sound volume chnage on keys
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
