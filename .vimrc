@@ -29,7 +29,7 @@ autocmd BufRead,BufNewFile *.c setlocal ts=8 shiftwidth=8 softtabstop=8
 autocmd Filetype make       setlocal noexpandtab
 
 " Rules for Latex files
-autocmd BufRead,BufNewFile *.tex setlocal wrap linebreak nolist
+autocmd BufRead,BufNewFile *.tex setlocal wrap linebreak nolist tw=80
 
 " Rules for Markdown files
 autocmd BufRead,BufNewFile *.md setlocal wrap linebreak nolist spell textwidth=80
