@@ -3,7 +3,7 @@ set from = "root@thesudorm.com"
 set realname = "Joseph Bauer"
 
 # My credentials
-set smtp_url = "smtp://root@thesudorm.com@mail.privateemail.coms:587/"
+set smtp_url = "smtp://root@thesudorm.com@mail.privateemail.com:587/"
 set smtp_pass = "password"
 set imap_user = "root@thesudorm.com"
 set imap_pass = "password"
