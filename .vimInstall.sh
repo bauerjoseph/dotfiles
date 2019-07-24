@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "Making vim backup directory.."
+mkdir ~/.vimbackups
+
 echo "Installing pathogen.."
 
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
