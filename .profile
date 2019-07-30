@@ -28,3 +28,7 @@ fi
 
 
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# Add ~/.local/ to PATH
+# This is to enable python scripts installed for the user
+export PATH=$HOME/.local/bin:$PATH
