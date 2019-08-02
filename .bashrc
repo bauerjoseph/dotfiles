@@ -146,6 +146,8 @@ alias u="cd .."
 alias e=$EDITOR
 alias droplet="ssh bauerj@167.99.145.89"
 
+alias FUCK="setxkbmap -option"
+
 complete -cf sudo
 
 #(cat ~/.cache/wal/sequences &)
@@ -153,5 +155,3 @@ complete -cf sudo
 
 alias dark="base16_unikitty-dark"
 alias light="base16_unikitty-light"
-
-

@@ -32,3 +32,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # Add ~/.local/ to PATH
 # This is to enable python scripts installed for the user
 export PATH=$HOME/.local/bin:$PATH
+
+# Setup go path 
+export PATH=$PATH:$(go env GOPATH)/bin
+export GOPATH=$(go env GOPATH)
