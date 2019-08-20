@@ -126,6 +126,10 @@ setxkbmap -option ctrl:swapcaps
 # Add rust to my path
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# Setup go path 
+export PATH=$PATH:$(go env GOPATH)/bin
+export GOPATH=$(go env GOPATH)
+
 #Dev mutt for sr.ht
 alias dmutt='mutt -F ~/.devmuttrc'
 

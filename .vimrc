@@ -52,3 +52,6 @@ call pathogen#helptags()
 " This is to help tell the difference between insert mode
 :autocmd InsertEnter * set cul
 :autocmd InsertLeave * set nocul
+
+" FZF to fuzzy find files
+map <C-p> :FZF<CR>

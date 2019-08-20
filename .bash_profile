@@ -26,6 +26,9 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # Add ~/.local/ to PATH
 # This is to enable python scripts installed for the user
 export PATH=$HOME/.local/bin:$PATH
