@@ -2,6 +2,9 @@
 :set number
 :syntax on
 
+:set ignorecase
+:set smartcase
+
 set backupdir=~/.vimbackups//,.
 
 " These next four lines are so that I break the habit of using the arrow keys
