@@ -186,8 +186,8 @@ exec --no-startup-id compton
 client.focused          #ba2ad3 #ba2ad3 #ba2ad3 #ba2ad3 #ba2ad3
 
 # Setting up sound volume chnage on keys
-bindsym XF86AudioRaiseVolume exec amixer set 'Master' 2%+
-bindsym XF86AudioLowerVolume exec amixer set 'Master' 2%-
+bindsym XF86AudioRaiseVolume exec amixer set 'Master' 5%+
+bindsym XF86AudioLowerVolume exec amixer set 'Master' 5%-
 bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
 
 # setting up brightness keys

@@ -58,3 +58,10 @@ call pathogen#helptags()
 
 " FZF to fuzzy find files
 map <C-p> :FZF<CR>
+
+" vim-plug plugins
+call plug#begin('~/.vim/plugged')
+
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
+cal plug#end()
