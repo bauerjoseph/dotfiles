@@ -23,34 +23,40 @@ focused = #ffffff
 ;urgent = #B8B8B8
 urgent = #ffffff
 foreground = #ffffff
+background = #000000
+
+[fonts]
+font-0 = undefined-medium:pixelsize=9
+font-1 = FontAwesome 5 Free Solid:pixelsize=12
+font-2 = Nerd Font Solid:pixelsize=12
 
 [bar/bar]
 bottom = false
+fixed-center = true
 
 width = 100%
-height = 30
+height = 20
 
-background = #00000000
+font-0 = undefined-medium:pixelsize=9
+
 foreground = ${colors.foreground}
+backgroud = ${colors.backgroud}
 
-radius = 0.0
+radius = 2
 
 line-size = 1
 
 padding-left = 1
-padding-right = 2
+padding-right = 1
 
 module-margin = 1
 
-font-0 = undefined-medium:pixelsize=10
-font-1 = FontAwesome 5 Free Solid:pixelsize=12
-font-2 = Nerd Font Solid:pixelsize=12
 
 modules-left = workspaces focused_window_title
 modules-center = cpu memory 
 modules-right = network volume battery date
 
-separator = %{F#4a4a4a}|%{F-}
+separator = %{FFFFFF}|%{FFFFFFF}
 
 locale = en_US.UTF-8
 
@@ -145,8 +151,7 @@ type = internal/battery
 battery = BAT0
 
 battery-label = BAT
-format-charging = <animation-charging> 
-format-charging-underline = #ffb52a
+format-charging = <animation-charging> <label-charging>
 
 format-discharging = <animation-discharging> <label-discharging>
 
@@ -156,9 +161,9 @@ ramp-capacity-0 = 
 ramp-capacity-1 = 
 ramp-capacity-2 = 
 
-animation-charging-0 = CHR BATT
-animation-charging-1 = CHR BATT
-animation-charging-2 = CHR BATT
+animation-charging-0 = CHR 
+animation-charging-1 = CHR 
+animation-charging-2 = CHR
 animation-charging-framerate = 750
 
 animation-discharging-0 = BATT
@@ -173,5 +178,5 @@ date = %a, %b %d
 
 time = %I:%M %p
 
-label = %date% %{F#4a4a4a}| %{F-}%time%
+label = %date% %{FFFFFF}| %{F-}%time%
 
