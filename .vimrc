@@ -1,6 +1,7 @@
 :set relativenumber
 :set number
 :syntax on
+:set updatetime=100
 
 :set ignorecase
 :set smartcase
@@ -54,10 +55,3 @@ map <F5> :NERDTree<cr><c-w>p
 
 " FZF to fuzzy find files
 map <C-p> :FZF<CR>
-
-" vim-plug plugins
-call plug#begin('~/.vim/plugged')
-
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-
-cal plug#end()
