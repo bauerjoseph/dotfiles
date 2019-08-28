@@ -3,3 +3,5 @@
 	name = Joseph Bauer
 [alias]
 	nccommit = commit -a --allow-empty-message -m \"\"
+[core]
+	editor = nvim
