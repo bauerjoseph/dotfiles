@@ -6,6 +6,11 @@
 :set ignorecase
 :set smartcase
 
+:set foldmethod=indent
+:set foldlevel=99
+
+set encoding=utf-8
+
 set backupdir=~/.vimbackups//,.
 
 " These next four lines are so that I break the habit of using the arrow keys
@@ -45,6 +50,8 @@ au BufNewFile,BufRead *.ejs set filetype=html
 
 " NerdTree mapped to f5
 map <F5> :NERDTree<cr><c-w>p
+
+:nnoremap <space> za
 
 " Plugins that are not mentioned here:
 " Status bar at bottom of screen: https://github.com/vim-airline/vim-airline

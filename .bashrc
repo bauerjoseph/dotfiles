@@ -126,6 +126,10 @@ setxkbmap -option ctrl:swapcaps
 # Add rust to my path
 export PATH="$HOME/.cargo/bin:$PATH"
 
+export PATH="/usr/bin:$PATH"
+
+# Add /usr/bin to PATH
+
 # Setup go path 
 export PATH=$PATH:$(go env GOPATH)/bin
 export GOPATH=$(go env GOPATH)
@@ -153,9 +157,6 @@ alias droplet="ssh bauerj@167.99.145.89"
 alias FUCK="setxkbmap -option"
 
 complete -cf sudo
-
-#(cat ~/.cache/wal/sequences &)
-#clear
 
 alias dark="base16_unikitty-dark"
 alias light="base16_unikitty-light"
