@@ -11,6 +11,8 @@
 
 set encoding=utf-8
 
+highlight Comment cterm=italic gui=italic
+
 set backupdir=~/.vimbackups//,.
 
 " These next four lines are so that I break the habit of using the arrow keys

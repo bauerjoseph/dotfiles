@@ -24,7 +24,7 @@ border-top-size = 5
 font-0 = undefined-medium:pixelsize=9
 
 foreground = ${colors.foreground}
-backgroud = ${colors.backgroud}
+background = #00000000
 
 ;radius = 10
 
