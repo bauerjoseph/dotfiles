@@ -45,7 +45,7 @@ element {
 }
 
 element selected {
-  background-color: rgba(212, 110, 105, 1);
+  background-color: rgba ( 2, 20, 63, 100 % );
   text-color: #CACBB9;
   transition: 20;
 }
@@ -64,7 +64,7 @@ inputbar {
 }
 
 prompt {
-  background-color: #d46e69;
+  background-color: rgba ( 2, 20, 63, 100 % );
   padding: 8;
   border-radius: 10 0 0 12;
   text-color: #CACBB9;
