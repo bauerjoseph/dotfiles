@@ -174,10 +174,10 @@ gaps outer 5
 exec --no-startup-id nm-applet --tray
 
 # Wallpaper
-exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.png
 
 # terminal colors
-exec --no-startup-id wal -i ~/Pictures/wallpaper.jpg
+#exec --no-startup-id wal -i ~/Pictures/wallpaper.jpg
 
 # Startup compton
 exec --no-startup-id compton -f
