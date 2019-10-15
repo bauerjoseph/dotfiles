@@ -145,6 +145,8 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
             eval "$("$BASE16_SHELL/profile_helper.sh")"
 
+(cat ~/.cache/wal/sequences &)
+
 # set PATH so it includes user's private bin if it exists
 # this is to add pmbootstrap to $PATH
 if [ -d "$HOME/.local/bin" ] ; then

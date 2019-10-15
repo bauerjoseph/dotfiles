@@ -12,6 +12,7 @@ Packages=(
     polybar
     git
     cava
+    redshift
 )
 
 for pack in "${Packages[@]}"

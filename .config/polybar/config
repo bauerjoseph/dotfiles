@@ -31,14 +31,13 @@ background = #00000000
 line-size = 1
 
 padding-left = 1
-padding-right = 6
+padding-right = 4
 
 module-margin = 1
 
 
-modules-left = workspaces focused_window_title
-modules-center = cpu memory 
-modules-right = volume battery date
+modules-left = workspaces 
+modules-right = battery 
 
 separator = %{FFFFFF}|%{FFFFFFF}
 
@@ -47,10 +46,10 @@ locale = en_US.UTF-8
 enable-ipc = true
 
 tray-position = right
-;tray-padding = 0
-;tray-offset-y = -1
-tray-offset-x = -30
-;tray-detatched = false
+tray-padding = 2
+tray-offset-y = -1
+tray-offset-x = -25
+tray-detatched = false
 ;tray-transparent = true
 
 [settings]
@@ -138,9 +137,11 @@ type = internal/battery
 battery = BAT0
 
 battery-label = BAT
-format-charging = <animation-charging> <label-charging>
+;format-charging = <animation-charging> <label-charging>
+;format-discharging = <animation-discharging> <label-discharging>
 
-format-discharging = <animation-discharging> <label-discharging>
+format-charging = <label-charging>
+format-discharging = <label-discharging>
 
 format-full-prefix = " "
 
@@ -148,9 +149,9 @@ ramp-capacity-0 = 
 ramp-capacity-1 = 
 ramp-capacity-2 = 
 
-animation-charging-0 = CHR 
-animation-charging-1 = CHR 
-animation-charging-2 = CHR
+animation-charging-0 = 
+animation-charging-1 = CHR2
+animation-charging-2 = CHR3
 animation-charging-framerate = 750
 
 animation-discharging-0 = BATT
