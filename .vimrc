@@ -36,7 +36,7 @@ noremap <Right> <Nop>
 autocmd BufRead,BufNewFile *.txt setlocal wrap linebreak nolist spell textwidth=80
 
 " Rules for c files
-autocmd BufRead,BufNewFile *.c setlocal ts=8 shiftwidth=8 softtabstop=8
+" autocmd BufRead,BufNewFile *.c setlocal ts=8 shiftwidth=8 softtabstop=8
 
 " Use hardtabs instead of spaces for make files
 autocmd Filetype make       setlocal noexpandtab
