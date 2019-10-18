@@ -37,6 +37,7 @@ module-margin = 1
 
 
 modules-left = workspaces 
+modules-center = date 
 modules-right = battery 
 
 separator = %{FFFFFF}|%{FFFFFFF}
@@ -163,5 +164,5 @@ animation-discharging-framerate = 750
 type = internal/date
 date = %a, %b %d
 time = %I:%M %p
-label = %date% %{FFFFFF}| %{F-}%time%
+label = %{F-}%time%
 
