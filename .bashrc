@@ -123,17 +123,6 @@ export EDITOR="$VISUAL"
 #swap caps with control
 setxkbmap -option ctrl:swapcaps
 
-# Add rust to my path
-export PATH="$HOME/.cargo/bin:$PATH"
-
-export PATH="/usr/bin:$PATH"
-
-# Add /usr/bin to PATH
-
-# Setup go path 
-export PATH=$PATH:$(go env GOPATH)/bin
-export GOPATH=$(go env GOPATH)
-
 #Dev mutt for sr.ht
 alias dmutt='mutt -F ~/.devmuttrc'
 
@@ -149,9 +138,9 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 
 # set PATH so it includes user's private bin if it exists
 # this is to add pmbootstrap to $PATH
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
-    fi
+#if [ -d "$HOME/.local/bin" ] ; then
+    #PATH="$HOME/.local/bin:$PATH"
+    #fi
 
 alias u="cd .."
 alias e=$EDITOR
