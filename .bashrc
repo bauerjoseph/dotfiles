@@ -155,4 +155,7 @@ alias light="base16_unikitty-light"
 
 alias vim="nvim"
 
+#Adding python scripts installed at user level
+export PATH="${PATH}:${HOME}/.local/bin/"
+
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

@@ -13,12 +13,14 @@ Packages=(
     git
     cava
     redshift
+    node
+    curl
 )
 
 for pack in "${Packages[@]}"
 do
     echo "Installing $pack"
-    sudo eopkg it $pack -y
+    sudo apt-get install $pack -y
 done
 
 echo 

@@ -166,8 +166,8 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 for_window [class="^.*"] border pixel 4
 
 # This is to control the gaps between windows
-gaps inner 8
-gaps outer 5
+#gaps inner 8
+#gaps outer 5
 
 #These are the commands executed at start up
 #exec --no-startup-id wicd-client --tray
