@@ -1,5 +1,22 @@
 #!/bin/bash
 
+# List of packages to install for Ubuntu
+Ubuntu_packages=(
+    xbacklight
+    neovim
+    neofetch
+    compton
+    feh
+    i3
+    rofi
+    polybar
+    git
+    cava
+    redshift
+    nodejs
+    curl
+)
+
 # List of packages to install for Solus
 Packages=(
     xbacklight
@@ -17,10 +34,16 @@ Packages=(
     curl
 )
 
-for pack in "${Packages[@]}"
+# Determine which OS I am on
+# looks like I can find the string Ubuntu in /proc/version 
+
+
+# Should track to see which packages were not installed 
+# properly and report them at the end.
+for package in "${Packages[@]}"
 do
-    echo "Installing $pack"
-    sudo apt-get install $pack -y
+    echo "Installing $package"
+    sudo apt-get install -y $package
 done
 
 echo 
