@@ -31,8 +31,8 @@ background = #00000000
 
 line-size = 1
 
-padding-left = 1
-padding-right = 4
+padding-left = 0
+padding-right = 1
 
 module-margin = 1
 
@@ -49,8 +49,8 @@ enable-ipc = true
 
 tray-position = right
 tray-padding = 2
-tray-offset-y = -1
-tray-offset-x = -25
+tray-offset-y = -1.5
+tray-offset-x = -2
 tray-detatched = false
 ;tray-transparent = true
 
