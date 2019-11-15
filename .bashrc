@@ -134,7 +134,7 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
             eval "$("$BASE16_SHELL/profile_helper.sh")"
 
-(cat ~/.cache/wal/sequences &)
+ # (cat ~/.cache/wal/sequences &)
 
 # set PATH so it includes user's private bin if it exists
 # this is to add pmbootstrap to $PATH
@@ -145,8 +145,10 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 alias u="cd .."
 alias e=$EDITOR
 alias droplet="ssh bauerj@167.99.145.89"
-
 alias FUCK="setxkbmap -option"
+
+alias kidney="ssh kidneyFolk@gx1.cs.bgsu.edu"
+alias tunnel="ssh -N -L localhost:8888:localhost:8888 kidneyFolk@gx1.cs.bgsu.edu"
 
 complete -cf sudo
 
@@ -159,3 +161,4 @@ alias vim="nvim"
 export PATH="${PATH}:${HOME}/.local/bin/"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+

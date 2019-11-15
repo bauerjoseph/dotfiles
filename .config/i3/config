@@ -180,7 +180,7 @@ exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
 #exec --no-startup-id wal -i ~/Pictures/wallpaper.jpg
 
 # Startup compton
-exec --no-startup-id compton -f
+exec --no-startup-id compton -f --config ~/.config/compton/compton.conf
 
 # Colors for focus
 client.focused          #ba2ad3 #ba2ad3 #ba2ad3 #ba2ad3 #ba2ad3
