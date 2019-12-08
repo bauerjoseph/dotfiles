@@ -134,7 +134,7 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
             eval "$("$BASE16_SHELL/profile_helper.sh")"
 
- # (cat ~/.cache/wal/sequences &)
+(cat ~/.cache/wal/sequences &)
 
 # set PATH so it includes user's private bin if it exists
 # this is to add pmbootstrap to $PATH
@@ -159,6 +159,10 @@ alias vim="nvim"
 
 #Adding python scripts installed at user level
 export PATH="${PATH}:${HOME}/.local/bin/"
+
+# Adding go path
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 

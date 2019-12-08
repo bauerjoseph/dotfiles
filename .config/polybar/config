@@ -1,11 +1,11 @@
 [colors]
 ;focused = #5473A8
 ;focused = #ea2a2a
-focused = #000000
+focused = #FFFFFF
 ;urgent = #B8B8B8
-urgent = #000000
-foreground = #000000
-background = #000000
+urgent = #FFFFFF
+foreground = #FFFFFF
+background = #FFFFFF
 
 [fonts]
 font-0 = undefined-medium:pixelsize=9

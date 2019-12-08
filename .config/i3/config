@@ -174,7 +174,7 @@ for_window [class="^.*"] border pixel 4
 exec --no-startup-id nm-applet --tray
 
 # Wallpaper
-exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/planet.png
 
 # terminal colors
 #exec --no-startup-id wal -i ~/Pictures/wallpaper.jpg
