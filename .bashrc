@@ -135,20 +135,12 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
             eval "$("$BASE16_SHELL/profile_helper.sh")"
 
 (cat ~/.cache/wal/sequences &)
-
-# set PATH so it includes user's private bin if it exists
-# this is to add pmbootstrap to $PATH
-#if [ -d "$HOME/.local/bin" ] ; then
-    #PATH="$HOME/.local/bin:$PATH"
-    #fi
+set -o vi
 
 alias u="cd .."
 alias e=$EDITOR
 alias droplet="ssh bauerj@167.99.145.89"
 alias FUCK="setxkbmap -option"
-
-alias kidney="ssh kidneyFolk@gx1.cs.bgsu.edu"
-alias tunnel="ssh -N -L localhost:8888:localhost:8888 kidneyFolk@gx1.cs.bgsu.edu"
 
 complete -cf sudo
 
@@ -163,6 +155,9 @@ export PATH="${PATH}:${HOME}/.local/bin/"
 # Adding go path
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin
+
+# Adding flutter to path
+export PATH=$PATH:$HOME/.source/flutter/bin
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
