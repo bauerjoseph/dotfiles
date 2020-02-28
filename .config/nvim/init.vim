@@ -14,5 +14,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
 Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'rust-lang/rust.vim'
 
 cal plug#end()
