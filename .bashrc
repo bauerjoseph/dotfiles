@@ -138,6 +138,7 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 set -o vi
 
 alias u="cd .."
+alias c="clear"
 alias e=$EDITOR
 alias droplet="ssh bauerj@167.99.145.89"
 alias FUCK="setxkbmap -option"
