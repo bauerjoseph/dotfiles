@@ -1,7 +1,6 @@
 configuration {
   display-drun: "";
   display-run: "";
-  drun-display-format: "{icon}{name}";
 	modi: "window,drun,run,ssh";
 	combi-modi: "drun,run,ssh";
   font: "Cascadia Code 12";

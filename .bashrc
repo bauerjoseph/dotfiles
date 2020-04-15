@@ -123,17 +123,6 @@ export EDITOR="$VISUAL"
 #swap caps with control
 setxkbmap -option ctrl:swapcaps
 
-# Add rust to my path
-export PATH="$HOME/.cargo/bin:$PATH"
-
-export PATH="/usr/bin:$PATH"
-
-# Add /usr/bin to PATH
-
-# Setup go path 
-export PATH=$PATH:$(go env GOPATH)/bin
-export GOPATH=$(go env GOPATH)
-
 #Dev mutt for sr.ht
 alias dmutt='mutt -F ~/.devmuttrc'
 
@@ -146,17 +135,12 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
             eval "$("$BASE16_SHELL/profile_helper.sh")"
 
 (cat ~/.cache/wal/sequences &)
-
-# set PATH so it includes user's private bin if it exists
-# this is to add pmbootstrap to $PATH
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
-    fi
+set -o vi
 
 alias u="cd .."
+alias c="clear"
 alias e=$EDITOR
 alias droplet="ssh bauerj@167.99.145.89"
-
 alias FUCK="setxkbmap -option"
 
 complete -cf sudo
@@ -166,4 +150,15 @@ alias light="base16_unikitty-light"
 
 alias vim="nvim"
 
+#Adding python scripts installed at user level
+export PATH="${PATH}:${HOME}/.local/bin/"
+
+# Adding go path
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin
+
+# Adding flutter to path
+export PATH=$PATH:$HOME/.source/flutter/bin
+
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+

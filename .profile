@@ -33,3 +33,5 @@ export PATH=$HOME/.local/bin:$PATH
 # Setup go path 
 export PATH=$PATH:$(go env GOPATH)/bin
 export GOPATH=$(go env GOPATH)
+
+export PATH="$HOME/.cargo/bin:$PATH"

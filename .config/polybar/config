@@ -1,14 +1,14 @@
 [colors]
 ;focused = #5473A8
 ;focused = #ea2a2a
-focused = #ffffff
+focused = #FFFFFF
 ;urgent = #B8B8B8
-urgent = #ffffff
-foreground = #ffffff
-background = #000000
+urgent = #FFFFFF
+foreground = #FFFFFF
+background = #FFFFFF
 
 [fonts]
-font-0 = undefined-medium:pixelsize=9
+font-0 = undefined-medium:pixelsize=11
 font-1 = FontAwesome 5 Free Solid:pixelsize=12
 font-2 = Nerd Font Solid:pixelsize=12
 
@@ -20,6 +20,7 @@ width = 100%
 height = 20
 
 border-top-size = 5
+border-bottom-size = 5
 
 font-0 = undefined-medium:pixelsize=9
 
@@ -30,8 +31,8 @@ background = #00000000
 
 line-size = 1
 
-padding-left = 1
-padding-right = 4
+padding-left = 0
+padding-right = 1
 
 module-margin = 1
 
@@ -47,8 +48,8 @@ enable-ipc = true
 
 tray-position = right
 tray-padding = 2
-tray-offset-y = -1
-tray-offset-x = -25
+tray-offset-y = -1.5
+tray-offset-x = -2
 tray-detatched = false
 ;tray-transparent = true
 
@@ -134,7 +135,7 @@ ramp-volume-2 = VOL
 ;interval = 10
 
 type = internal/battery
-battery = BAT0
+battery = BAT1
 
 battery-label = BAT
 ;format-charging = <animation-charging> <label-charging>
