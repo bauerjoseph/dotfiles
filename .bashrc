@@ -157,6 +157,9 @@ export PATH="${PATH}:${HOME}/.local/bin/"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin
 
+# Adding rust to path
+export PATH=$PATH:$HOME/.cargo/bin/
+
 # Adding flutter to path
 export PATH=$PATH:$HOME/.source/flutter/bin
 

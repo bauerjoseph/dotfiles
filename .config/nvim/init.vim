@@ -16,5 +16,6 @@ Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rust-lang/rust.vim'
 Plug 'pechorin/any-jump.vim'
+Plug 'JuliaEditorSupport/julia-vim'
 
 cal plug#end()
