@@ -152,6 +152,7 @@ alias vim="nvim"
 
 #Adding python scripts installed at user level
 export PATH="${PATH}:${HOME}/.local/bin/"
+export PATH="${PATH}:${HOME}/.src/julia/"
 
 # Adding go path
 export GOPATH=$HOME/go
