@@ -121,7 +121,7 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 
 #swap caps with control
-setxkbmap -option ctrl:swapcaps
+#setxkbmap -option ctrl:swapcaps
 
 #Dev mutt for sr.ht
 alias dmutt='mutt -F ~/.devmuttrc'
@@ -149,6 +149,7 @@ alias dark="base16_unikitty-dark"
 alias light="base16_unikitty-light"
 
 alias vim="nvim"
+alias emacs="emacs -nw"
 
 #Adding python scripts installed at user level
 export PATH="${PATH}:${HOME}/.local/bin/"
@@ -156,6 +157,7 @@ export PATH="${PATH}:${HOME}/.local/bin/"
 # Adding go path
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin
+export PATH=$PATH:$HOME/go/bin
 
 # Adding rust to path
 export PATH=$PATH:$HOME/.cargo/bin/
