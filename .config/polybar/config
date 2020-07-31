@@ -36,7 +36,6 @@ padding-right = 1
 
 module-margin = 1
 
-
 modules-left = workspaces 
 modules-center = date 
 modules-right = battery 
