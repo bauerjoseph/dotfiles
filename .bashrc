@@ -120,9 +120,6 @@ fi
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-#swap caps with control
-#setxkbmap -option ctrl:swapcaps
-
 #Dev mutt for sr.ht
 alias dmutt='mutt -F ~/.devmuttrc'
 
