@@ -33,7 +33,10 @@ noremap <Right> <Nop>
 :set wrap!
 
 " Rules for text files
-autocmd BufRead,BufNewFile *.txt setlocal wrap linebreak nolist spell textwidth=80
+autocmd BufRead,BufNewFile *.txt setlocal wrap linebreak nolist spell textwidth=80 
+
+" Rules for org files
+autocmd BufRead,BufNewFile *.org setlocal wrap linebreak nolist spell textwidth=80
 
 " Rules for c files
 " autocmd BufRead,BufNewFile *.c setlocal ts=8 shiftwidth=8 softtabstop=8
@@ -45,7 +48,7 @@ autocmd Filetype make       setlocal noexpandtab
 autocmd BufRead,BufNewFile *.tex setlocal wrap linebreak nolist tw=80
 
 " Rules for Markdown files
-autocmd BufRead,BufNewFile *.md setlocal wrap linebreak nolist spell textwidth=80
+autocmd BufRead,BufNewFile *.md setlocal wrap linebreak nolist spell textwidth=80 foldmethod=syntax
 
 " Highlighting for ejs files
 au BufNewFile,BufRead *.ejs set filetype=html
@@ -72,3 +75,5 @@ map <C-p> :FZF<CR>
 com! FormatXML :%!python3 -c "import xml.dom.minidom, sys; print(xml.dom.minidom.parse(sys.stdin).toprettyxml())"
 
 nnoremap = :FormatXML<Cr>
+
+let g:markdown_folding = 1
