@@ -2,6 +2,9 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+# Adding directory path to bash prompt
+PS1="\w: "
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -114,3 +117,6 @@ export PATH=$PATH:$HOME/go/bin
 
 # Adding rust to path
 export PATH=$PATH:$HOME/.cargo/bin/
+
+# Digital ocean doesn't like TERM being set to alacitty
+export TERM=linux
