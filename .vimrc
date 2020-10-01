@@ -56,7 +56,7 @@ au BufNewFile,BufRead *.ejs set filetype=html
 " NerdTree mapped to f5
 " map <F5> :NERDTree<cr><c-w>p
 " map <F5> :!cargo run<cr>
-map <F5> :!julia.exe main.jl<cr>
+map <F5> :!make<cr>
 map <F6> :!RUST_BACKTRACE=1 cargo run<cr>
 
 :nnoremap <space> za
