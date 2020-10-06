@@ -104,9 +104,6 @@ complete -cf sudo
 alias dark="base16_unikitty-dark"
 alias light="base16_unikitty-light"
 
-alias vim="nvim"
-alias emacs="emacs -nw"
-
 #Adding python scripts installed at user level
 export PATH="${PATH}:${HOME}/.local/bin/"
 
