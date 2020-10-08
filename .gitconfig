@@ -3,5 +3,6 @@
 	name = Joseph Bauer
 [alias]
 	nccommit = commit -a --allow-empty-message -m \"\"
+    lg = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\n--abbrev-commit --date=relative
 [core]
-	editor = nvim
+	editor = vim
