@@ -117,3 +117,5 @@ export PATH=$PATH:$HOME/.cargo/bin/
 
 # Digital ocean doesn't like TERM being set to alacitty
 export TERM=linux
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
