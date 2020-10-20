@@ -104,8 +104,6 @@ complete -cf sudo
 alias dark="base16_unikitty-dark"
 alias light="base16_unikitty-light"
 
-alias emacs="emacs -nw"
-
 #Adding python scripts installed at user level
 export PATH="${PATH}:${HOME}/.local/bin/"
 
@@ -119,3 +117,5 @@ export PATH=$PATH:$HOME/.cargo/bin/
 
 # Digital ocean doesn't like TERM being set to alacitty
 export TERM=linux
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
