@@ -38,6 +38,9 @@ autocmd BufRead,BufNewFile *.txt setlocal wrap linebreak nolist spell textwidth=
 " Rules for org files
 autocmd BufRead,BufNewFile *.org setlocal wrap linebreak nolist spell textwidth=80
 
+" Rules for gemini files
+autocmd BufRead,BufNewFile *.gmi setlocal wrap nolist spell
+
 " Rules for c files
 " autocmd BufRead,BufNewFile *.c setlocal ts=8 shiftwidth=8 softtabstop=8
 
