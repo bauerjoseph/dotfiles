@@ -15,9 +15,8 @@ set $up k
 set $right l
 
 # Your preferred terminal emulator
-set $term gnome-terminal #temporary. Alacritty doesn't work on my old thinkpad...
+set $term alacritty
 
-# Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
@@ -26,7 +25,7 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg /usr/share/backgrounds/default.png fill
-output * bg ~/pictures/wallpaper.jpg fill
+output * bg ~/pictures/retro.png fill
 #
 # Example configuration:
 #
@@ -209,28 +208,32 @@ bindsym $mod+r mode "resize"
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
-bar {
-    position top
+#bar {
+    #position top
 
     #When the status_command prints a new line to stdout, swaybar updates.
     #The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
+    #status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
 
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
-}
-
-#bar {
-#   swaybar_command waybar
+    #colors {
+        #statusline #ffffff
+        #background #323232
+        #inactive_workspace #32323200 #32323200 #5c5c5c
+    #}
 #}
+
+bar {
+    swaybar_command waybar
+}
 
 include /etc/sway/config.d/*
 
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+# setting up brightness keys
+bindsym XF86MonBrightnessDown exec brightnessctl set 10-
+bindsym XF86MonBrightnessUp exec brightnessctl set +10
 
 default_border pixel 3
 gaps inner 20
