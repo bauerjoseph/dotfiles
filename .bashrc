@@ -99,6 +99,8 @@ alias c="clear"
 alias e=$EDITOR
 alias droplet="ssh bauerj@167.99.145.89"
 
+setxkbmap -option ctrl:swapcaps
+
 complete -cf sudo
 
 alias dark="base16_unikitty-dark"
