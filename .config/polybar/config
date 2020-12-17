@@ -15,6 +15,7 @@ font-2 = Nerd Font Solid:pixelsize=12
 [bar/bar]
 bottom = false
 fixed-center = true
+monitor = ${env:MONITOR:}
 
 width = 100%
 height = 20
@@ -38,7 +39,7 @@ module-margin = 1
 
 modules-left = workspaces 
 modules-center = date 
-modules-right = battery 
+modules-right = network nm-launcher battery volume
 
 separator = %{FFFFFF}|%{FFFFFFF}
 
@@ -110,9 +111,21 @@ label-mounted = %free%
 
 [module/network]
 type = internal/network
-interface = 
-format-connected = CONNEC
-label-disconnected = DISCONN
+interface = wlp3s0
+format-connected = <ramp-signal> <label-connected>
+format-disconnected = <label-disconnected>
+
+label-disconnected = not connected
+label-disconnected-foreground = #66ffffff
+label-connected = %essid% %downspeed:9%
+label-connected-foreground = #eefafafa
+
+ramp-signal-0 = 😱
+ramp-signal-1 = 😠
+ramp-signal-2 = 😒
+ramp-signal-3 = 😊
+ramp-signal-4 = 😃
+ramp-signal-5 = 😈
 
 [module/volume]
 type = internal/alsa
