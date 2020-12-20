@@ -121,3 +121,4 @@ export PATH=$PATH:$HOME/.cargo/bin/
 export TERM=linux
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+source "$HOME/.cargo/env"
