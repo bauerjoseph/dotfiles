@@ -1,0 +1,181 @@
+[colors]
+;focused = #5473A8
+;focused = #ea2a2a
+focused = #FFFFFF
+;urgent = #B8B8B8
+urgent = #FFFFFF
+foreground = #FFFFFF
+background = #FFFFFF
+
+[fonts]
+font-0 = undefined-medium:pixelsize=11
+font-1 = FontAwesome 5 Free Solid:pixelsize=12
+font-2 = Nerd Font Solid:pixelsize=12
+
+[bar/bar]
+bottom = false
+fixed-center = true
+monitor = ${env:MONITOR:}
+
+width = 100%
+height = 20
+
+border-top-size = 5
+border-bottom-size = 5
+
+font-0 = undefined-medium:pixelsize=9
+
+foreground = ${colors.foreground}
+background = #00000000
+
+;radius = 10
+
+line-size = 1
+
+padding-left = 0
+padding-right = 1
+
+module-margin = 1
+
+modules-left = workspaces 
+modules-center = date 
+modules-right = cpu memory network battery volume
+
+separator = %{FFFFFF}|%{FFFFFFF}
+
+locale = en_US.UTF-8
+
+enable-ipc = true
+
+tray-position = right
+tray-padding = 2
+tray-offset-y = -1.5
+tray-offset-x = -2
+tray-detatched = false
+;tray-transparent = true
+
+[settings]
+screenchange-reload = true
+
+[module/workspaces]
+type = internal/i3
+
+index-sort = true
+
+enable-scroll = false
+wrapping-scroll = false
+reverse-scroll = false
+
+format = <label-state> <label-mode>
+
+label-mode = %{F#4a4a4a}|%{F-} %{F#bcecff}%mode%%{F-}
+
+label-focused = %name%
+label-focused-foreground = ${colors.focused}
+label-focused-backgroud = #000000
+label-focused-underline = ${colors.focused}
+label-focused-padding = 1
+
+label-unfocused = %name%
+label-unfocused-foreground = ${colors.foreground}
+label-unfocused-padding = 1
+
+label-visible = %name%
+label-visible-foreground = ${colors.foreground}
+label-visible-padding = 1
+
+label-urgent = %name%
+label-urgent-foreground = ${colors.urgent}
+;label-urgent-underline = ${colors.urgent}
+label-urgent-padding = 1
+
+[module/focused_window_title]
+type = internal/xwindow
+label = %title%
+label-maxlen = 30
+
+[module/cpu]
+type = internal/cpu
+label = %percentage% %
+
+[module/memory]
+type = internal/memory
+interval = 1
+label = %gb_free%
+
+[module/disk]
+type = internal/fs
+mount-0 = /
+interval = 10
+label-mounted = %free%
+
+[module/network]
+type = internal/network
+interface = wlp2s0
+format-connected = <ramp-signal> <label-connected>
+format-disconnected = <label-disconnected>
+
+label-disconnected = not connected
+label-disconnected-foreground = #66ffffff
+label-connected = %essid% %downspeed:9%
+label-connected-foreground = #eefafafa
+
+ramp-signal-0 = 😱
+ramp-signal-1 = 😠
+ramp-signal-2 = 😒
+ramp-signal-3 = 😊
+ramp-signal-4 = 😃
+ramp-signal-5 = 😈
+
+[module/volume]
+type = internal/alsa
+
+sink = alsa_output.pci-0000_00_1b.0.analog-stereo
+use-ui-max = false
+
+format-volume = <ramp-volume> <label-volume>
+
+label-muted = MUTED
+
+ramp-volume-0 = VOL
+ramp-volume-1 = VOL
+ramp-volume-2 = VOL
+
+[module/battery]
+; Example that uses a script to calculate battery
+;type = custom/script
+;exec = ~/.config/polybar/combined_battery.sh
+;interval = 10
+
+type = internal/battery
+battery = BAT0
+
+battery-label = BAT
+;format-charging = <animation-charging> <label-charging>
+;format-discharging = <animation-discharging> <label-discharging>
+
+format-charging = <label-charging>
+format-discharging = <label-discharging>
+
+format-full-prefix = " "
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+
+animation-charging-0 = 
+animation-charging-1 = CHR2
+animation-charging-2 = CHR3
+animation-charging-framerate = 750
+
+animation-discharging-0 = BATT
+animation-discharging-1 = BATT
+animation-discharging-2 = BATT
+animation-discharging-framerate = 750
+
+[module/date]
+type = internal/date
+date = %a, %b %d
+time = %I:%M %p
+label = %{F-}%time%
+
