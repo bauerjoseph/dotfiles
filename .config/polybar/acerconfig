@@ -39,7 +39,7 @@ module-margin = 1
 
 modules-left = workspaces 
 modules-center = date 
-modules-right = network nm-launcher battery volume
+modules-right = cpu memory network battery volume
 
 separator = %{FFFFFF}|%{FFFFFFF}
 
@@ -111,7 +111,7 @@ label-mounted = %free%
 
 [module/network]
 type = internal/network
-interface = wlp3s0
+interface = wlp2s0
 format-connected = <ramp-signal> <label-connected>
 format-disconnected = <label-disconnected>
 
@@ -148,7 +148,7 @@ ramp-volume-2 = VOL
 ;interval = 10
 
 type = internal/battery
-battery = BAT1
+battery = BAT0
 
 battery-label = BAT
 ;format-charging = <animation-charging> <label-charging>

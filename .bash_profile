@@ -27,7 +27,6 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 
-export PATH="$HOME/.cargo/bin:$PATH"
 
 # Add ~/.local/ to PATH
 # This is to enable python scripts installed for the user
@@ -37,3 +36,4 @@ export PATH=$HOME/.local/bin:$PATH
 export PATH=$PATH:$(go env GOPATH)/bin
 export GOPATH=$(go env GOPATH)
 _byobu_sourced=1 . /usr/bin/byobu-launch 2>/dev/null || true
+source "$HOME/.cargo/env"

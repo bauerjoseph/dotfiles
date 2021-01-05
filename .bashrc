@@ -99,6 +99,8 @@ alias c="clear"
 alias e=$EDITOR
 alias droplet="ssh bauerj@167.99.145.89"
 
+setxkbmap -option ctrl:swapcaps
+
 complete -cf sudo
 
 alias dark="base16_unikitty-dark"
@@ -119,3 +121,4 @@ export PATH=$PATH:$HOME/.cargo/bin/
 export TERM=linux
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+source "$HOME/.cargo/env"
