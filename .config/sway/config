@@ -15,7 +15,7 @@ set $up k
 set $right l
 
 # Your preferred terminal emulator
-set $term alacritty
+set $term gnome-terminal
 
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -208,23 +208,23 @@ bindsym $mod+r mode "resize"
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
-#bar {
-    #position top
+bar {
+    position top
 
     #When the status_command prints a new line to stdout, swaybar updates.
     #The default just shows the current date and time.
-    #status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
+    status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
 
-    #colors {
-        #statusline #ffffff
-        #background #323232
-        #inactive_workspace #32323200 #32323200 #5c5c5c
-    #}
-#}
-
-bar {
-    swaybar_command waybar
+    colors {
+        statusline #ffffff
+        background #323232
+        inactive_workspace #32323200 #32323200 #5c5c5c
+    }
 }
+
+#bar {
+    #swaybar_command waybar
+#}
 
 include /etc/sway/config.d/*
 
