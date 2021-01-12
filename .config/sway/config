@@ -221,7 +221,7 @@ bar {
 
     #When the status_command prints a new line to stdout, swaybar updates.
     #The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
+    status_command while date +'%b %d%l:%M %p'; do sleep 1; done
 
     colors {
         statusline #ffffff
@@ -243,7 +243,7 @@ bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86MonBrightnessDown exec brightnessctl set 10-
 bindsym XF86MonBrightnessUp exec brightnessctl set +10
 
-default_border pixel 3
-gaps inner 20
+default_border pixel 2
+gaps inner 10
 gaps outer 0
 client.focused          #ba2ad3 #ba2ad3 #ba2ad3 #ba2ad3 #ba2ad3
