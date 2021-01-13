@@ -1,7 +1,7 @@
 [{
     "layer":"top",
     "margin-top": 3,
-    "margin-bottom": -10,
+    "margin-bottom": 10,
     "margin-left": 20,
     "margin-right": 20,
     "output":["eDP-1","HDMI-A-1","DP-3"],
