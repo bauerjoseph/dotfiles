@@ -117,6 +117,9 @@ export PATH=$PATH:$HOME/go/bin
 # Adding rust to path
 export PATH=$PATH:$HOME/.cargo/bin/
 
+# Adding personal bin to path
+export PATH=$PATH:$HOME/bin/
+
 # Digital ocean doesn't like TERM being set to alacitty
 export TERM=linux
 
