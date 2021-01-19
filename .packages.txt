@@ -18,6 +18,7 @@ device-mapper
 dhcpcd
 diffutils
 discord
+dunst
 dmenu
 e2fsprogs
 ejabberd
