@@ -1,0 +1,56 @@
+#entry {
+border-radius: 5px;
+padding: 5px;
+margin: 1px 2px 1px 2px;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+#entry:selected {
+color: black;
+background-color: transparent;
+font-weight: bold;
+}
+ 
+#text:selected {
+  color: black;
+}
+ 
+#window {
+background-color: transparent;
+font-family: Hack;
+}
+
+#input {
+border: none;
+background-color: #e999f7;
+border-radius: 5px;
+margin: 4px;
+}
+
+#inner-box {
+color: orange;
+border-radius: 10px;
+}
+
+#outer-box {
+background-color: #d32a98;
+box-shadow: 0px 0px 5px 0  #0F0F0F;
+}
+
+#scroll {
+}
+
+#text {
+color: #d8dee9;
+background-color: transparent;
+} 
+
+#img {
+  background-color: transparent;
+}
+
+
