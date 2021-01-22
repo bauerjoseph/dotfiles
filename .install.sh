@@ -22,13 +22,13 @@ sudo dnf update # hard coding for Fedora for now
 
 # Should track to see which packages were not installed 
 # properly and report them at the end.
-for package in "${Packages[@]}"
-do
-    echo "Installing $package"
+#for package in "${Packages[@]}"
+#do
+    #echo "Installing $package"
     #sudo dnf install $package -y
-done
+#done
 
-echo 
+#echo 
 
 # Doom Emacs
 # make these fail if the directory already exists

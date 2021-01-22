@@ -1,126 +1,227 @@
+@import "nord.css";
+
 * {
-    padding: 0px;
-    transition-duration: 0s;
-    font-family: Alagard;
+	border: none;
+	font-size: 13px;
+	margin: 2px;
+	font-family: Hack; 
 }
-
 window#waybar {
-    background-color: rgba(1,1,1,0);
+	background-color: #190134;
+	color: @base04;
+  /* border-bottom: 2px solid rgba(46,52,64,0.7); */
 }
-
-#workspaces button {
-    margin: 3px 5px 0px 5px
+#workspaces, #tags {
+	background-color: #994675;
+	padding: 0px 5px 0px 5px;
+	font-size: 15px;
+  margin-right: 10px;
+	border-radius: 10px;
 }
-
-#workspaces button {
-    border-radius: 2px;
-    color: #52cd91;
+#workspaces button, #tags button {
+  background-color: transparent;
+	font-size: 14px;
+	margin: 0;
+	color: @base06;
 }
-
-#workspaces button,
-#clock, 
+#window {
+	color: @base04;
+	margin: 0px;
+  font-size: 14px;
+	border-radius: 10px;
+	padding: 0px 6px 0px 6px;
+}
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces button:hover, #tags button:hover {
+	box-shadow: inherit;
+	color: @base0A;
+}
+#workspaces button.focused, #tags button.focused {
+	color: @base09;
+}
+#tags button.focused {
+  font-weight: 600;
+}
+#workspaces button.urgent {
+	color:  @base0B;
+}
+#tags button {
+  color: @base03;
+  font-weight: 600;
+}
+/* TASKBAR */
+#taskbar {
+	margin: 0px;
+}
+#taskbar button {
+	border-radius: 10px;
+  font-size: 13px;
+	padding: 0px 2px 0px 2px;
+}
+#taskbar button.active {
+	background-color: @base00;
+}
+#taskbar button.minimized {
+	/* color: @base0D; */
+}
+#taskbar button:hover {
+	box-shadow: inherit;
+	background-color: rgba(35,39,49,0.4);
+}
+/* BROWSER BOOKMARKS */
+#custom-name, #custom-github,#custom-reddit,#custom-crunchyroll,#custom-youtube,#custom-mail, #custom-library {
+	background-color: #994675;
+	font-size: 18px;
+  margin-left: 0;
+  margin-right: 0;
+	padding: 0px 15px 0px 15px ;
+}
+#custom-github {
+	border-radius: 10px 0px 0px 10px;
+	color: @base0C;
+}
+#custom-reddit {
+	color: @base0D;
+}
+#custom-crunchyroll {
+	color: @base0E;
+	font-size: 15px;
+}
+#custom-youtube {
+	color: @base0F;
+}
+#custom-mail {
+	color: @base08;
+	font-size: 16px;
+	border-radius: 0px 10px 10px 0px;
+}
+/* WIDGETS */
+#cpu, #custom-pacman, #memory, #backlight, #disk, #network, #pulseaudio, #custom-weather, #temperature {
+  font-size: 14px;
+	background-color: #994675;
+	padding: 0px 14px 0px 14px;
+	margin: 2px 0px 2px 0px;
+}
+#disk {
+	color: @base0F;
+}
+#memory {
+	color: @base0C;
+}
+#cpu {
+	color: @base0B-light;
+}
+#network {
+  color: #9da98d;
+}
+#custom-weather {
+	color: @base09;
+}
+#custom-weather {
+	padding: 0px 8px 0px 8px;
+}
+#custom-media, #mpd, #custom-mpd {
+	font-size: 14px;
+	border-radius: 10px;
+  margin-left: 10px;
+  background-color: transparent;
+}
+#custom-media.Playing {
+	color: @base09;
+	border-radius: 0px;
+	font-weight: 500;
+}
+#custom-mpd {
+	color: @base0F;
+	border-radius: 0px;
+	font-weight: 500;
+}
+#mpd.paused {
+	color: @base03;
+}
+#mpd.playing {
+	color: @base09;
+}
+#mpd.stopped {
+  color: @base01;
+}
+#custom-pacman {
+	color: @base0D;
+	border-radius: 0px 10px 10px 0px;
+	font-weight: 600;
+}
+#pulseaudio {
+	color: @base07;
+	border-radius: 10px 0px 0px 10px;
+}
+#pulseaudio.muted {
+	color: @base03;
+}
+#temperature{
+	color: @base08;
+}
+#temperature.critical {
+	color: @base0D;
+}
 #battery {
-    font-size: 15px;
+	color: @base07;
+	padding: 0px 8px 0px 8px;
 }
-
-#workspaces button label {
-    background: transparent;
-    color: #3d3d3d;
+#battery.charging {
+	color: @base06;
 }
-
-#workspaces button:last-child {
-    border-radius: 2px 8px 8px 2px;
+@keyframes blink {
+	to {
+		background-color: #eceff4;
+		color: @base00;
+	}
 }
-
-#workspaces button:first-child {
-    border-radius: 8px 2px 2px 8px;
+#battery.critical:not(.charging) {
+	background-color: @base0B;
+	color: @base06;
+	animation-name: blink;
+	animation-duration: 0.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
 }
-
-#workspaces button:only-child {
-    border-radius: 8px 8px 8px 8px;
+label:focus {
+	background-color: @base00;
 }
-
-#workspaces button:nth-child(1) {
-    background-color: #dbf0d3; 
-    border-color: #dbf0d3;
+#idle_inhibitor {
+	font-size: 18px;
+	color: @base04;
 }
-
-#workspaces button:nth-child(2) {
-    background-color: #ade6d4;
-    border-color: #ade6d4;
+#idle_inhibitor.activated {
+	color: @base02;
 }
-
-#workspaces button:nth-child(3) {
-    background-color: #8bc4b2; 
-    border-color: #8bc4b2;
+#clock, #idle_inhibitor, #custom-power, #custom-recorder, #tray {
+	background-color: #994675;
+	padding: 2px 10px 0px 10px;
+	margin: 2px 0px 2px 0px;
 }
-
-#workspaces button:nth-child(4) {
-    background-color: #79b285; 
-    border-color: #79b285;
-    
+#clock {
+	font-size: 14px;
 }
-
-#workspaces button:nth-child(5) {
-    background-color: #69a290; 
-    border-color: #69a290;
+#custom-recorder {
+	padding: 2px 5px 0px 5px;
+  font-size: 18px;
 }
-
-#workspaces button:nth-child(6) {
-    background-color: #699778; 
-    border-color: #699778;
+#custom-recorder.recording {
+	color: @base0B;
 }
-
-#workspaces button:nth-child(7) {
-    background-color: #478070; 
-    border-color: #478070;
+#tray {
+	border-radius: 10px 0px 0px 10px;
+	margin-left: 10px;
+	color: @base07;
 }
-
-#workspaces button.focused {
-    padding: 0px 5px 0px 5px;
-}
-
-#workspaces button.active {
-    padding: 0px 5px 0px 5px;
-}
-
-#mode {
-    padding: 0px 0px 0px 16px;          
-    color: #ebdbb2;
-}
-
-#clock, 
-#battery {
-    margin: 3px 5px 0px 5px;
-    border-radius: 2px;
-    border-width: 0px 10px 0px 10px;
-    border-style: solid;
-}
-
-#clock,
-#battery {
-    color: #3d3d3d;
-}
-
-#battery {
-    background-color: #ea5827;
-    border-color: #ea5827;
-}
-
-#clock.1 {
-    background-color: #dbf0d3;
-    border-color: #dbf0d3;
-    border-radius: 2px 8px 8px 2px;
-}
-
-#clock.2 {
-    background-color: #8bc4b2;
-    border-color: #8bc4b2;
-    border-radius: 8px 2px 2px 8px;
-}
-
-#clock.3 {
-    background-color: #fe8019;
-    border-color: #fe8019;
-    border-radius: 8px 2px 2px 8px;
+#custom-power {
+  color: @base06;
+	font-size: 17px;
+	border-radius: 0px 10px 10px 0px;
+	margin-right: 2px;
 }

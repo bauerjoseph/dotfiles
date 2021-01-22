@@ -19,5 +19,5 @@ while :
     VOL=${VOL:1:-1}
 
     echo "${DATE} BATT ${PERC} VOL ${VOL}"
-    do sleep 1; 
+    do sleep 0.1; 
 done
