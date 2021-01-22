@@ -4,27 +4,17 @@
   // "height": 30, // Waybar height (to be removed for auto height)
   // "width": 2560, // Waybar width
   // Choose the order of the modules
-  "modules-left": ["river/tags", "sway/workspaces", "custom/github", "custom/reddit", "custom/youtube", "custom/mail","custom/media",],
+  "modules-left": ["sway/workspaces"],
   "modules-center": ["sway/window"],
   "output": ["eDP-1"],
-  "modules-right": ["pulseaudio", "custom/weather", "disk", "memory", "cpu",
-  "temperature", "network", "battery#bat2", "backlight", "custom/pacman",
-  "tray", "custom/recorder", "clock", "custom/power", ],
+  "modules-right": ["pulseaudio", "custom/weather", "memory", "cpu",
+  "temperature", "network", "battery", "backlight", "custom/pacman",
+  "clock" ],
   // Modules configuration
   "sway/workspaces": {
     "disable-scroll": false,
     "all-outputs": true,
     "format": "{icon}",
-    "persistent_workspaces": {
-      "1": ["HDMI-A-1"],
-      "2": ["HDMI-A-1"],
-      "3": ["HDMI-A-1"],
-      "4": ["HDMI-A-1"],
-      "5": [],
-      "6": [],
-      "7": [],
-      "8": [],
-    },
     "format-icons": {
       "1": "1",
       "2": "2",
@@ -76,12 +66,12 @@
     // "format-alt": "{:%Y-%m-%d}"
   },
   "cpu": {
-    "format": "{usage}  ",
+    "format": "{usage}%  ",
     "on-click": "foot ytop",
     "tooltip": false
   },
   "memory": {
-    "format": "{}  "
+    "format": "{}%  "
   },
   "backlight": {
     "interval": 5,
