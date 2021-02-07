@@ -21,6 +21,12 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
+" To help escape terminal window in neovim
+tnoremap <C-w>h <C-\><C-n><C-w>h
+tnoremap <C-w>j <C-\><C-n><C-w>j
+tnoremap <C-w>k <C-\><C-n><C-w>k
+tnoremap <C-w>l <C-\><C-n><C-w>l
+
 " Indetation and spacing rules
 :set expandtab
 :set ts=4
@@ -72,7 +78,7 @@ map <F6> :!RUST_BACKTRACE=1 cargo run<cr>
 :autocmd InsertLeave * set nocul
 
 " FZF to fuzzy find files
-map <C-p> :FZF<CR>
+map <C-p> :FZF ~<CR>
 
 " Format xml
 com! FormatXML :%!python3 -c "import xml.dom.minidom, sys; print(xml.dom.minidom.parse(sys.stdin).toprettyxml())"
