@@ -34,5 +34,4 @@ export PATH=$HOME/.local/bin:$PATH
 export PATH=$PATH:$(go env GOPATH)/bin
 export GOPATH=$(go env GOPATH)
 
-_byobu_sourced=1 . /usr/bin/byobu-launch 2>/dev/null || true
 source "$HOME/.cargo/env"
