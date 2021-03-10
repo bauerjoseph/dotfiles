@@ -154,6 +154,7 @@ export PATH=$PATH:/usr/lib64/openmpi/bin/
 export TERM=linux
 
 alias ls='ls --color'
+alias byobu='byobu -2'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 source "$HOME/.cargo/env"
