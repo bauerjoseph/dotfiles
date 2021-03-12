@@ -64,7 +64,7 @@ esac
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls -G'
+    #alias ls='ls -G'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
@@ -99,8 +99,8 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 # make vim default text editor
-export VISUAL=vim
-export EDITOR="$VISUAL"
+export VISUAL=nvim
+export EDITOR=($VISUAL)
 
 #Dev mutt for sr.ht
 alias dmutt='mutt -F ~/.devmuttrc'
@@ -143,13 +143,15 @@ export PATH=$PATH:$HOME/.cargo/bin/
 export PATH=$PATH:$HOME/bin/
 export PATH=$PATH:/usr/local/bin/
 
+export PATH=$PATH:/usr/lib64/openmpi/bin/
+
+
 # Digital ocean doesn't like TERM being set to alacitty
 export TERM=xterm-256color
 
 
-alias ls='ls -G'
+alias ls='ls --color'
+alias byobu='byobu -2'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 source "$HOME/.cargo/env"
-
-

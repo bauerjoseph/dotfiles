@@ -42,6 +42,8 @@ tnoremap <C-w>l <C-\><C-n><C-w>l
 autocmd BufRead,BufNewFile *.txt setlocal wrap linebreak nolist spell textwidth=80 
 autocmd BufRead,BufNewFile *.wiki setlocal wrap linebreak nolist spell textwidth=80 
 
+autocmd BufRead,BufNewFile *.wiki setlocal wrap linebreak nolist spell textwidth=80 
+
 " Rules for org files
 autocmd BufRead,BufNewFile *.org setlocal wrap linebreak nolist spell textwidth=80
 
@@ -81,5 +83,6 @@ map <F6> :!RUST_BACKTRACE=1 cargo run<cr>
 " FZF to fuzzy find files
 map <C-p> :FZF<CR>
 " map <C-p> :FZF ~<CR>
+map <S-p><C-p> :FZF ~<CR>
 
 let g:markdown_folding = 1

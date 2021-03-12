@@ -7,9 +7,10 @@ call plug#begin('~/.vim/plugged')
 
 " Plug 'vim-airline/vim-airline' " Does not work with tmux
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'jiangmiao/auto-pairs'
+Plug 'vimwiki/vimwiki'
 " Plug 'scrooloose/nerdtree'
 " Plug 'tpope/vim-fugitive'
-Plug 'jiangmiao/auto-pairs'
 " Plug 'airblade/vim-gitgutter'
 " Plug 'dense-analysis/ale'
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}
