@@ -29,11 +29,6 @@ if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-# set a fancy prompt (non-color, unless we know we "want" color)
-case "$TERM" in
-    xterm-color) color_prompt=yes;;
-esac
-
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
@@ -146,15 +141,15 @@ export PATH=$PATH:$HOME/.cargo/bin/
 
 # Adding personal bin to path
 export PATH=$PATH:$HOME/bin/
+export PATH=$PATH:/usr/local/bin/
 
 # Digital ocean doesn't like TERM being set to alacitty
-export TERM=linux
+export TERM=xterm-256color
+
 
 alias ls='ls -G'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 source "$HOME/.cargo/env"
-
-
 
 
