@@ -74,9 +74,4 @@ map <F6> :!RUST_BACKTRACE=1 cargo run<cr>
 " FZF to fuzzy find files
 map <C-p> :FZF<CR>
 
-" Format xml
-com! FormatXML :%!python3 -c "import xml.dom.minidom, sys; print(xml.dom.minidom.parse(sys.stdin).toprettyxml())"
-
-nnoremap = :FormatXML<Cr>
-
 let g:markdown_folding = 1

@@ -15,7 +15,7 @@ set $up k
 set $right l
 
 # Your preferred terminal emulator
-set $term alacritty
+set $term gnome-terminal
 
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -64,7 +64,7 @@ input "type:keyboard" {
 }
 
 input "2:10:TPPS/2_IBM_TrackPoint" {
-    pointer_accel -0.2
+    pointer_accel -0.6
 }
 
 input "type:touchpad" {
@@ -216,25 +216,25 @@ bindsym $mod+r mode "resize"
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
-#bar {
-    #position top
-    #height 0
-    #font Hack Normal Heavy 13
+bar {
+    position top
+    height 0
+    font Hack Normal Heavy 13
 
     #When the status_command prints a new line to stdout, swaybar updates.
     #The default just shows the current date and time.
-    #status_command ~/bin/swaybarstatus.sh
+    status_command ~/bin/swaybarstatus.sh
 
-    #colors {
-        #statusline #ffffff
-        #background #323232
-        #inactive_workspace #32323200 #32323200 #5c5c5c
-    #}
-#}
-
-bar {
-    swaybar_command waybar
+    colors {
+        statusline #ffffff
+        background #323232
+        inactive_workspace #32323200 #32323200 #5c5c5c
+    }
 }
+
+#bar {
+    #swaybar_command waybar
+#}
 
 include /etc/sway/config.d/*
 
