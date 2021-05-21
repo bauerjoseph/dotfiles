@@ -150,7 +150,7 @@ export PATH=$PATH:/usr/lib64/openmpi/bin/
 export TERM=xterm-256color
 
 
-alias ls='ls -G'
+alias ls='ls --color'
 alias byobu='byobu -2'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
