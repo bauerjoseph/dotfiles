@@ -35,6 +35,9 @@
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
 
+;; Set default language for ispell
+(setq ispell-dictionary "en")
+
 ;; Wrap lines at 80 cols for specific files
 (setq-default fill-column 80)
 (add-hook 'markdown-mode-hook 'auto-fill-mode)
