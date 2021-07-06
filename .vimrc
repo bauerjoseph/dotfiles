@@ -29,11 +29,10 @@ tnoremap <C-w>l <C-\><C-n><C-w>l
 
 " Indetation and spacing rules
 :set expandtab
+:set autoindent
 :set ts=4
 :set shiftwidth=4
 :set softtabstop=4
-
-:set autoindent
 
 " Turn off word wrap
 :set wrap!
@@ -41,10 +40,6 @@ tnoremap <C-w>l <C-\><C-n><C-w>l
 " Rules for text files
 autocmd BufRead,BufNewFile *.txt setlocal wrap linebreak nolist spell textwidth=80 
 autocmd BufRead,BufNewFile *.wiki setlocal wrap linebreak nolist spell textwidth=80 
-
-autocmd BufRead,BufNewFile *.wiki setlocal wrap linebreak nolist spell textwidth=80 
-
-" Rules for org files
 autocmd BufRead,BufNewFile *.org setlocal wrap linebreak nolist spell textwidth=80
 
 " Rules for gemini files
