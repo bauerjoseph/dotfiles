@@ -109,3 +109,22 @@ func Zettel(...)
     exec "normal ggO\<c-r>=strftime('%Y-%m-%d %H:%M')\<cr>\<cr>\<esc>G"
   endif
 endfunc
+
+" Adding something for todo lists
+command! -nargs=* Todo call Todo()
+
+func Todo()
+
+  " build the file name
+  let l:sep = ''
+
+  let l:fname = expand('~/todo/') . strftime("%F") . l:sep . '.md'
+
+  " edit the new file
+  exec "e " . l:fname
+
+  " windo let win_count += len(expand('%'))
+  if len(expand('%')) < 0
+    exec "normal ggO\<c-r>=strftime('%Y-%m-%d')\<cr>\<cr>\<esc>G"
+  endif
+endfunc

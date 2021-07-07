@@ -158,3 +158,7 @@ source "$HOME/.cargo/env"
 zet() {
     nvim "+Zet $*"
 }
+
+todo() {
+    nvim "+Todo"
+}
