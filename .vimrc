@@ -81,3 +81,45 @@ map <C-p> :FZF<CR>
 map <S-p><C-p> :FZF ~<CR>
 
 let g:markdown_folding = 1
+
+" Attempting some vimscript to make a vim function to take notes
+command! -nargs=* Zet call Zettel(<f-args>)
+
+func Zettel(...)
+
+  " build the file name
+  let l:sep = ''
+  if len(a:000) > 0
+    let l:sep = '-'
+  endif
+  let l:fname = expand('~/wiki/') . strftime("%F-%H%M") . l:sep . join(a:000, '-') . '.md'
+
+  " edit the new file
+  exec "e " . l:fname
+
+  " enter the title and timestamp (using ultisnips) in the new file
+  if len(a:000) > 0
+    exec "normal ggO\<c-r>=strftime('%Y-%m-%d %H:%M')\<cr> " . join(a:000) . "\<cr>\<esc>G"
+  else
+    exec "normal ggO\<c-r>=strftime('%Y-%m-%d %H:%M')\<cr>\<cr>\<esc>G"
+  endif
+endfunc
+
+" Adding something for todo lists
+command! -nargs=* Todo call Todo()
+
+func Todo()
+
+  " build the file name
+  let l:sep = ''
+
+  let l:fname = expand('~/todo/') . strftime("%F") . l:sep . '.md'
+
+  " edit the new file
+  exec "e " . l:fname
+
+  " windo let win_count += len(expand('%'))
+  if len(expand('%')) < 0
+    exec "normal ggO\<c-r>=strftime('%Y-%m-%d')\<cr>\<cr>\<esc>G"
+  endif
+endfunc

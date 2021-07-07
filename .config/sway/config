@@ -15,7 +15,7 @@ set $up k
 set $right l
 
 # Your preferred terminal emulator
-set $term gnome-terminal
+set $term alacritty
 
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -64,7 +64,7 @@ input "type:keyboard" {
 }
 
 input "2:10:TPPS/2_IBM_TrackPoint" {
-    pointer_accel -0.6
+    pointer_accel 0.0
 }
 
 input "type:touchpad" {
