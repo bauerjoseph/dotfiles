@@ -155,8 +155,8 @@ alias byobu='byobu -2'
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 source "$HOME/.cargo/env"
 
-zet() {
-    nvim "+Zet $*"
+note() {
+    nvim "+Note $*"
 }
 
 todo() {

@@ -83,9 +83,9 @@ map <S-p><C-p> :FZF ~<CR>
 let g:markdown_folding = 1
 
 " Attempting some vimscript to make a vim function to take notes
-command! -nargs=* Zet call Zettel(<f-args>)
+command! -nargs=* Note call CreateNote(<f-args>)
 
-func Zettel(...)
+func CreateNote(...)
 
   " build the file name
   let l:sep = ''
